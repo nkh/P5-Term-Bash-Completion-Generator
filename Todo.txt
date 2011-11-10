@@ -1,0 +1,68 @@
+#------------------#
+# This is Todo.txt #
+#------------------#
+
+- make all the functions start with -
+	- all completion
+	-xy   completion for xy...
+	-?    help for the command
+	-?xy  help for xy...
+	-xy?  help for xy...
+	-??   long help
+	-??xy longhelp for xy...
+	-xy?? longhelp for xy...
+	-//   search the command help
+	-///  search receips
+	-/man search in the man page
+	-/xy  search all options containing xy
+	-xy/  search all options containing xy
+	-//xy search all the option hep for xy
+	-xy// search all the option hep for xy
+ 
+	-soundex use soundex search, the option is otherwise ignore in the application  
+
+	
+- completion that matches receips (with help)
+	use case: I want to see all the dependencies and I know there are multiple ways
+
+		-///depe[tab]
+
+		display a set of possible ways to get dependencies, eg:
+
+		To display dependencies the blah blah blah
+
+
+- automatically generate completion from man page
+
+- load/search in plugins that are not part of the completion script
+	- allows the user to add plugins
+	- plugins get the current command line
+	- whole completion script could be in plugins allowing new -/// command start
+
+- possibility to layer completion on top of another commands completion
+	- eg: mygit -///something -option
+		///something is handled by our completion while -option is handled by the git completion
+
+- keep a statistic about help and switch usage 
+		
+- show if option switch takes argument
+
+- search the options
+	use case: remember that the option contained 'directory' but not it it is 
+		delete_directory or remove_directory or maybe one remembers wrong
+	
+- search the options help
+
+- search with soundex
+
+- simple commandline started completion script generator to include in modules
+	use Term::...
+	'generate_completion_script' => \&generate_completion_script
+
+- help through the completion system
+	command argument?
+
+- colored output
+
+- user input
+
